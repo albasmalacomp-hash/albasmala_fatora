@@ -1,0 +1,1053 @@
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="utf-8" />
+                <style>
+                    body {
+                        font-family: sans-serif;
+                        color: #111C2D;
+                        line-height: 1.6;
+                        margin: 32px;
+                    }
+                    p {
+                        margin: 0 0 14px;
+                        white-space: pre-wrap;
+                    }
+                </style>
+            </head>
+            <body>
+                <p>&lt;!DOCTYPE html&gt;</p>
+<p>&lt;html lang=&quot;ar&quot; dir=&quot;rtl&quot;&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+<p>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
+<p>&lt;meta name=&quot;theme-color&quot; content=&quot;#1e3a8a&quot;&gt;</p>
+<p>&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;</p>
+<p>&lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;</p>
+<p>&lt;title&gt;البسملة الطبية | الفواتير&lt;/title&gt;</p>
+<p>&lt;style&gt;</p>
+<p>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}</p>
+<p>:root{</p>
+<p>  --b50:#eff6ff;--b100:#dbeafe;--b200:#bfdbfe;--b300:#93c5fd;--b400:#60a5fa;</p>
+<p>  --b500:#3b82f6;--b600:#2563eb;--b700:#1d4ed8;--b800:#1e40af;--b900:#1e3a8a;</p>
+<p>  --g50:#f0fdf4;--g100:#dcfce7;--g200:#bbf7d0;--g500:#22c55e;--g600:#16a34a;--g700:#15803d;</p>
+<p>  --s50:#f8fafc;--s100:#f1f5f9;--s200:#e2e8f0;--s300:#cbd5e1;--s400:#94a3b8;</p>
+<p>  --s500:#64748b;--s600:#475569;--s700:#334155;--s800:#1e293b;--s900:#0f172a;</p>
+<p>  --r500:#f43f5e;--r600:#e11d48;--e50:#ecfdf5;--e100:#d1fae5;--e200:#a7f3d0;</p>
+<p>  --e300:#6ee7b7;--e400:#34d399;--e700:#047857;--e800:#065f46;</p>
+<p>  --radius:12px;--r-lg:16px;--r-xl:20px;</p>
+<p>}</p>
+<p>html,body{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}</p>
+<p>body{</p>
+<p>  font-family:-apple-system,&quot;Segoe UI&quot;,Tahoma,Arial,sans-serif;</p>
+<p>  background:var(--s100);color:var(--s800);line-height:1.5;min-height:100vh;</p>
+<p>  font-size:14px;overflow-x:hidden;</p>
+<p>}</p>
+<p>input,select,textarea,button{font-family:inherit;font-size:16px}</p>
+<p>img,svg{display:block;max-width:100%}</p>
+<p>button{cursor:pointer;border:0;background:none;color:inherit}</p>
+<p>input,select,textarea{outline:none}</p>
+<p><br/></p>
+<p>/* Header */</p>
+<p>.app-header{</p>
+<p>  position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);</p>
+<p>  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);</p>
+<p>  border-bottom:1px solid var(--s200);box-shadow:0 1px 3px rgba(0,0,0,.04);</p>
+<p>}</p>
+<p>.header-inner{</p>
+<p>  max-width:1280px;margin:0 auto;padding:10px 14px;</p>
+<p>  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;</p>
+<p>}</p>
+<p>.brand{display:flex;align-items:center;gap:10px;min-width:0}</p>
+<p>.brand-icon{</p>
+<p>  width:42px;height:42px;border-radius:var(--r-lg);flex-shrink:0;</p>
+<p>  background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 50%,#16a34a 100%);</p>
+<p>  color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;</p>
+<p>  box-shadow:0 4px 12px rgba(30,58,138,.25);</p>
+<p>}</p>
+<p>.brand h1{font-size:16px;font-weight:800;color:var(--b900);line-height:1.1}</p>
+<p>.brand p{font-size:11px;color:var(--s500);font-weight:600}</p>
+<p><br/></p>
+<p>.header-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}</p>
+<p><br/></p>
+<p>/* Buttons */</p>
+<p>.btn{</p>
+<p>  display:inline-flex;align-items:center;justify-content:center;gap:6px;</p>
+<p>  padding:8px 12px;font-size:12px;font-weight:700;border-radius:var(--radius);</p>
+<p>  transition:all .15s ease;white-space:nowrap;</p>
+<p>}</p>
+<p>.btn:active{transform:scale(.97)}</p>
+<p>.btn-ghost{color:var(--s600);background:transparent}</p>
+<p>.btn-ghost:hover{background:var(--s100);color:var(--s900)}</p>
+<p>.btn-outline{color:var(--b900);background:var(--e50);border:1px solid var(--e200)}</p>
+<p>.btn-outline:hover{background:var(--e100)}</p>
+<p>.btn-secondary{color:var(--s700);background:var(--s100)}</p>
+<p>.btn-secondary:hover{background:var(--s200)}</p>
+<p>.btn-primary{</p>
+<p>  color:#fff;background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 50%,#16a34a 100%);</p>
+<p>  box-shadow:0 4px 12px rgba(30,58,138,.25);</p>
+<p>}</p>
+<p>.btn-primary:hover{opacity:.95;box-shadow:0 6px 16px rgba(30,58,138,.35)}</p>
+<p>.btn-block{width:100%}</p>
+<p>.btn-dark{color:#fff;background:var(--s900)}</p>
+<p>.btn-dark:hover{background:var(--s800)}</p>
+<p>.btn-danger{color:#fff;background:var(--r600)}</p>
+<p>.btn-danger:hover{background:var(--r500)}</p>
+<p>.btn-sm{padding:6px 10px;font-size:11px}</p>
+<p><br/></p>
+<p>/* Layout */</p>
+<p>.main{max-width:1280px;margin:0 auto;padding:18px 14px 40px}</p>
+<p>.grid{display:grid;grid-template-columns:1fr;gap:20px;align-items:start}</p>
+<p>@media(min-width:1024px){</p>
+<p>  .grid{grid-template-columns:5fr 7fr;gap:24px}</p>
+<p>}</p>
+<p><br/></p>
+<p>/* Cards */</p>
+<p>.card{</p>
+<p>  background:#fff;border-radius:var(--r-lg);padding:16px;</p>
+<p>  box-shadow:0 1px 3px rgba(0,0,0,.05);border:1px solid var(--s200);</p>
+<p>  margin-bottom:16px;</p>
+<p>}</p>
+<p>.card-title{</p>
+<p>  display:flex;align-items:center;justify-content:space-between;gap:8px;</p>
+<p>  font-size:14px;font-weight:800;color:var(--b900);</p>
+<p>  padding-bottom:10px;border-bottom:1px solid var(--s100);margin-bottom:12px;</p>
+<p>}</p>
+<p>.card-title .label{display:flex;align-items:center;gap:6px}</p>
+<p><br/></p>
+<p>/* AI card */</p>
+<p>.ai-card{position:relative;overflow:hidden}</p>
+<p>.ai-card::before{</p>
+<p>  content:&#39;&#39;;position:absolute;inset:0;padding:2px;border-radius:var(--r-lg);</p>
+<p>  background:linear-gradient(135deg,#2563eb,#22c55e,#1e3a8a,#16a34a);</p>
+<p>  background-size:300% 300%;animation:grad 6s ease infinite;</p>
+<p>  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);</p>
+<p>  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;</p>
+<p>}</p>
+<p>@keyframes grad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}</p>
+<p>.ai-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;position:relative;z-index:1}</p>
+<p>.ai-icon-badge{</p>
+<p>  width:28px;height:28px;border-radius:8px;color:#fff;</p>
+<p>  background:linear-gradient(135deg,#1e3a8a,#16a34a);</p>
+<p>  display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;</p>
+<p>}</p>
+<p>.ai-head h2{font-size:14px;font-weight:800;color:var(--b900)}</p>
+<p>.ai-badge{</p>
+<p>  font-size:10px;font-weight:800;padding:3px 8px;border-radius:20px;</p>
+<p>  background:var(--b50);color:var(--b700);border:1px solid var(--b100);</p>
+<p>}</p>
+<p>.ai-badge.live{</p>
+<p>  background:var(--g100);color:var(--g700);border-color:var(--g200);</p>
+<p>  animation:pulse 1.5s ease-in-out infinite;</p>
+<p>}</p>
+<p>@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}</p>
+<p>.ai-desc{font-size:11px;color:var(--s500);line-height:1.6;margin-bottom:10px;position:relative;z-index:1}</p>
+<p><br/></p>
+<p>/* Forms */</p>
+<p>.form-group{margin-bottom:10px}</p>
+<p>.form-label{display:block;font-size:11px;font-weight:700;color:var(--s600);margin-bottom:5px}</p>
+<p>.form-label.strong{color:var(--b800);font-weight:800}</p>
+<p>.form-input{</p>
+<p>  width:100%;padding:9px 12px;border:1px solid var(--s200);border-radius:var(--radius);</p>
+<p>  background:#fff;font-size:14px;color:var(--s800);transition:all .15s;</p>
+<p>}</p>
+<p>.form-input:focus{border-color:var(--b500);box-shadow:0 0 0 3px rgba(37,99,235,.15)}</p>
+<p>.form-input.mono{font-family:ui-monospace,Menlo,Consolas,monospace}</p>
+<p>.form-input.ltr{direction:ltr;text-align:left}</p>
+<p>textarea.form-input{resize:none;line-height:1.5;min-height:60px}</p>
+<p><br/></p>
+<p>.form-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}</p>
+<p>.form-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}</p>
+<p><br/></p>
+<p>/* Chips */</p>
+<p>.chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}</p>
+<p>.chip{</p>
+<p>  font-size:10px;font-weight:600;padding:4px 9px;border-radius:8px;</p>
+<p>  background:var(--s100);color:var(--s600);border:1px solid var(--s200);</p>
+<p>  transition:all .15s;</p>
+<p>}</p>
+<p>.chip:hover{background:var(--b50);color:var(--b800);border-color:var(--b200)}</p>
+<p><br/></p>
+<p>/* AI actions */</p>
+<p>.ai-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:relative;z-index:1}</p>
+<p><br/></p>
+<p>/* History */</p>
+<p>.history-list{display:flex;gap:8px;overflow-x:auto;padding:4px 0 8px;-webkit-overflow-scrolling:touch}</p>
+<p>.history-list::-webkit-scrollbar{height:4px}</p>
+<p>.history-list::-webkit-scrollbar-thumb{background:var(--s300);border-radius:2px}</p>
+<p>.history-empty{font-size:11px;color:var(--s400);padding:4px 0}</p>
+<p>.history-chip{</p>
+<p>  flex-shrink:0;background:var(--s50);border:1px solid var(--s200);</p>
+<p>  border-radius:10px;padding:6px 10px;text-align:right;min-width:105px;transition:all .15s;</p>
+<p>}</p>
+<p>.history-chip:hover{background:var(--b50);border-color:var(--b500)}</p>
+<p>.history-chip .num{font-size:11px;font-weight:800;color:var(--b900);font-family:monospace}</p>
+<p>.history-chip .total{font-size:10px;font-weight:700;color:var(--g700);font-family:monospace}</p>
+<p>.history-chip .name{font-size:10px;color:var(--s600);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:110px}</p>
+<p><br/></p>
+<p>/* Items editor */</p>
+<p>.items-list{max-height:400px;overflow-y:auto;padding-left:2px;margin:0 -4px}</p>
+<p>.items-list::-webkit-scrollbar{width:6px}</p>
+<p>.items-list::-webkit-scrollbar-thumb{background:var(--s300);border-radius:3px}</p>
+<p>.item-row{</p>
+<p>  background:var(--s50);border:1px solid var(--s200);border-radius:var(--radius);</p>
+<p>  padding:10px;margin-bottom:8px;transition:border-color .15s;</p>
+<p>}</p>
+<p>.item-row:hover{border-color:var(--b500)}</p>
+<p>.item-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}</p>
+<p>.item-num{font-size:10px;font-weight:800;color:var(--b800)}</p>
+<p>.item-del{color:var(--s400);padding:4px;transition:color .15s;border-radius:4px;display:flex}</p>
+<p>.item-del:hover{color:var(--r600);background:#fee}</p>
+<p>.item-del svg{width:14px;height:14px}</p>
+<p><br/></p>
+<p>/* Preview */</p>
+<p>.preview-wrap{position:relative}</p>
+<p>.preview-toolbar{</p>
+<p>  display:flex;align-items:center;justify-content:space-between;</p>
+<p>  margin-bottom:8px;padding:0 2px;</p>
+<p>}</p>
+<p>.preview-tag{font-size:11px;font-weight:700;color:var(--s500);display:flex;align-items:center;gap:6px}</p>
+<p>.dot{width:6px;height:6px;border-radius:50%;background:var(--g500);animation:pulse 1.5s infinite}</p>
+<p><br/></p>
+<p>/* Invoice Paper */</p>
+<p>.invoice-paper{</p>
+<p>  background:#fff;border-radius:var(--r-xl);overflow:hidden;</p>
+<p>  box-shadow:0 10px 30px rgba(0,0,0,.08);border:1px solid var(--s200);</p>
+<p>  position:relative;</p>
+<p>}</p>
+<p>.paper-bar{height:9px;display:flex}</p>
+<p>.paper-bar .blue{flex:2;background:var(--b800)}</p>
+<p>.paper-bar .green{flex:1;background:var(--g600)}</p>
+<p>.watermark{</p>
+<p>  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;</p>
+<p>  opacity:.03;pointer-events:none;overflow:hidden;</p>
+<p>}</p>
+<p>.watermark svg{width:400px;height:400px}</p>
+<p>.paper-body{padding:22px 20px;position:relative;z-index:1}</p>
+<p>@media(min-width:640px){.paper-body{padding:32px 40px}}</p>
+<p><br/></p>
+<p>/* Header in paper */</p>
+<p>.paper-header{</p>
+<p>  display:flex;flex-direction:column;align-items:center;gap:14px;</p>
+<p>  padding-bottom:18px;border-bottom:2px solid var(--s100);margin-bottom:20px;</p>
+<p>}</p>
+<p>@media(min-width:640px){</p>
+<p>  .paper-header{flex-direction:row;justify-content:space-between;align-items:center}</p>
+<p>}</p>
+<p>.logo-block{display:flex;flex-direction:column;align-items:center}</p>
+<p>@media(min-width:640px){.logo-block{align-items:flex-start}}</p>
+<p>.logo-block img{height:100px;object-fit:contain}</p>
+<p>.logo-name{font-size:18px;font-weight:900;color:var(--b900);letter-spacing:-.5px;margin-top:-6px;text-align:center}</p>
+<p>.logo-tagline{display:flex;align-items:center;gap:6px;margin-top:4px;justify-content:center}</p>
+<p>.logo-tagline span{font-size:10px;font-weight:800;color:var(--g700)}</p>
+<p>.logo-tagline .line{width:22px;height:1.5px;background:var(--g600);border-radius:1px}</p>
+<p><br/></p>
+<p>.doc-type-box{text-align:center}</p>
+<p>@media(min-width:640px){.doc-type-box{text-align:left}}</p>
+<p>.doc-type{</p>
+<p>  display:inline-block;padding:7px 20px;border-radius:14px;</p>
+<p>  background:var(--b50);border:1px solid var(--b100);</p>
+<p>}</p>
+<p>.doc-type h1{</p>
+<p>  font-size:22px;font-weight:900;color:var(--b900);</p>
+<p>  text-decoration:underline;text-decoration-color:var(--g500);</p>
+<p>  text-decoration-thickness:2px;text-underline-offset:6px;</p>
+<p>}</p>
+<p>@media(min-width:640px){.doc-type h1{font-size:26px}}</p>
+<p>.doc-subtitle{font-size:10px;color:var(--s400);margin-top:6px;font-weight:500}</p>
+<p><br/></p>
+<p>/* Client info grid */</p>
+<p>.client-grid{</p>
+<p>  display:grid;grid-template-columns:1fr;gap:10px;</p>
+<p>  background:rgba(248,250,252,.9);border:1px solid var(--s200);</p>
+<p>  border-radius:var(--r-lg);padding:14px;margin-bottom:18px;</p>
+<p>}</p>
+<p>@media(min-width:640px){.client-grid{grid-template-columns:1fr 1fr;gap:20px}}</p>
+<p>.client-grid .col{display:flex;flex-direction:column;gap:8px}</p>
+<p>.client-row{</p>
+<p>  display:flex;justify-content:space-between;align-items:center;gap:8px;</p>
+<p>  padding-bottom:6px;border-bottom:1px solid var(--s300);</p>
+<p>}</p>
+<p>.client-row .k{font-size:12px;font-weight:800;color:var(--b900)}</p>
+<p>.client-row .v{font-size:12px;font-weight:700;color:var(--s800);font-family:monospace;overflow:hidden;text-overflow:ellipsis}</p>
+<p>.client-row .v.ltr{direction:ltr;text-align:left}</p>
+<p><br/></p>
+<p>/* Items table */</p>
+<p>.table-wrap{</p>
+<p>  overflow-x:auto;border-radius:var(--r-lg);border:1px solid var(--s200);</p>
+<p>  margin-bottom:18px;-webkit-overflow-scrolling:touch;</p>
+<p>}</p>
+<p>.items-table{width:100%;border-collapse:collapse;text-align:center;font-size:12px}</p>
+<p>.items-table thead tr{</p>
+<p>  background:linear-gradient(90deg,var(--b900),var(--b800),var(--b700));</p>
+<p>  color:#fff;</p>
+<p>}</p>
+<p>.items-table th{</p>
+<p>  padding:10px 6px;font-weight:700;font-size:11px;</p>
+<p>  border-left:1px solid rgba(30,64,175,.4);</p>
+<p>}</p>
+<p>.items-table th:last-child{border-left:0}</p>
+<p>.items-table th.right{text-align:right;padding-right:10px}</p>
+<p>.items-table tbody tr{border-bottom:1px solid var(--s200)}</p>
+<p>.items-table tbody tr:nth-child(even){background:var(--s50)}</p>
+<p>.items-table td{padding:10px 6px;color:var(--s700);font-size:12px}</p>
+<p>.items-table td.item-name{text-align:right;font-weight:700;color:var(--s800);direction:ltr;text-align:right;padding-right:10px}</p>
+<p>.items-table td.num{font-family:monospace;font-weight:700;color:var(--s800)}</p>
+<p>.items-table td.bonus{font-family:monospace;font-weight:700;color:var(--g700)}</p>
+<p>.items-table td.bonus.zero{color:var(--s500);font-weight:500}</p>
+<p>.items-table td.total{font-family:monospace;font-weight:900;color:var(--b900)}</p>
+<p>.items-table tfoot td{</p>
+<p>  padding:8px 6px;background:var(--s50);border-top:2px solid var(--s300);</p>
+<p>  font-size:11px;font-weight:800;color:var(--b900);</p>
+<p>}</p>
+<p>.items-table tfoot .count{font-family:monospace;font-size:13px;color:var(--g700)}</p>
+<p>.items-table tfoot .foot-note{text-align:left;color:var(--s400);font-weight:400;padding-left:10px}</p>
+<p><br/></p>
+<p>/* Totals */</p>
+<p>.totals-wrap{</p>
+<p>  display:flex;flex-direction:column;gap:16px;padding-top:4px;</p>
+<p>}</p>
+<p>@media(min-width:640px){</p>
+<p>  .totals-wrap{flex-direction:row;justify-content:space-between;align-items:flex-end;gap:24px}</p>
+<p>}</p>
+<p>.totals-box{</p>
+<p>  width:100%;background:var(--s50);border:1px solid var(--s200);</p>
+<p>  border-radius:var(--r-lg);padding:14px;</p>
+<p>}</p>
+<p>@media(min-width:640px){.totals-box{width:300px}}</p>
+<p>.total-row{</p>
+<p>  display:flex;justify-content:space-between;align-items:center;</p>
+<p>  padding:6px 0;border-bottom:1px solid var(--s200);</p>
+<p>}</p>
+<p>.total-row .k{font-size:12px;font-weight:800;color:var(--s700)}</p>
+<p>.total-row .v{font-size:13px;font-weight:800;font-family:monospace;color:var(--s900)}</p>
+<p>.total-row.discount .v{color:var(--r600)}</p>
+<p>.grand-row{</p>
+<p>  display:flex;justify-content:space-between;align-items:center;</p>
+<p>  background:var(--b900);color:#fff;padding:10px 12px;border-radius:10px;margin-top:6px;</p>
+<p>}</p>
+<p>.grand-row .k{font-size:13px;font-weight:900}</p>
+<p>.grand-row .v{font-size:15px;font-weight:900;font-family:monospace;color:var(--e300)}</p>
+<p><br/></p>
+<p>/* Notes &amp; sign */</p>
+<p>.notes-sign{display:flex;flex-direction:column;gap:14px;width:100%}</p>
+<p>@media(min-width:640px){.notes-sign{flex:1}}</p>
+<p>.notes-box{background:rgba(236,253,245,.7);border:1px solid var(--e200);border-radius:var(--r-lg);padding:12px}</p>
+<p>.notes-box .head{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:900;color:var(--b900);margin-bottom:5px}</p>
+<p>.notes-box p{font-size:12px;font-weight:700;color:var(--b900);padding-right:6px}</p>
+<p>.sign-row{display:flex;justify-content:space-between;gap:20px;padding:6px 8px}</p>
+<p>.sign-box{text-align:center;font-size:10px;color:var(--s500);flex:1}</p>
+<p>.sign-box .label{font-weight:700;color:var(--s700);margin-bottom:14px}</p>
+<p>.sign-box .line{width:100px;border-bottom:1px dashed var(--s400);margin:0 auto}</p>
+<p>.sign-box.blue .label{color:var(--b800)}</p>
+<p>.sign-box.blue .line{border-color:var(--b400)}</p>
+<p><br/></p>
+<p>/* Toast */</p>
+<p>.toast{</p>
+<p>  position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);</p>
+<p>  background:var(--s900);color:#fff;border-radius:var(--r-lg);padding:12px 18px;</p>
+<p>  box-shadow:0 10px 30px rgba(0,0,0,.3);display:flex;align-items:center;gap:10px;</p>
+<p>  transition:all .3s ease;opacity:0;pointer-events:none;z-index:50;max-width:90vw;</p>
+<p>}</p>
+<p>.toast.show{transform:translateX(-50%) translateY(0);opacity:1}</p>
+<p>.toast-icon{font-size:18px;flex-shrink:0}</p>
+<p>.toast-msg{font-size:13px;font-weight:700}</p>
+<p><br/></p>
+<p>/* Print */</p>
+<p>@media print{</p>
+<p>  .no-print,.app-header,.col-controls,.preview-toolbar,.toast{display:none!important}</p>
+<p>  body{background:#fff;padding:0;margin:0}</p>
+<p>  .main{padding:0;max-width:none}</p>
+<p>  .grid{grid-template-columns:1fr;gap:0}</p>
+<p>  .invoice-paper{box-shadow:none;border:none;border-radius:0}</p>
+<p>  .paper-body{padding:10mm}</p>
+<p>  .table-wrap{overflow:visible;page-break-inside:avoid}</p>
+<p>  .totals-wrap{page-break-inside:avoid}</p>
+<p>  @page{size:A4;margin:6mm}</p>
+<p>}</p>
+<p><br/></p>
+<p>/* Utility */</p>
+<p>.hidden{display:none!important}</p>
+<p>.text-mono{font-family:monospace}</p>
+<p>.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}</p>
+<p>&lt;/style&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p><br/></p>
+<p>&lt;header class=&quot;app-header no-print&quot;&gt;</p>
+<p>  &lt;div class=&quot;header-inner&quot;&gt;</p>
+<p>    &lt;div class=&quot;brand&quot;&gt;</p>
+<p>      &lt;div class=&quot;brand-icon&quot;&gt;💊&lt;/div&gt;</p>
+<p>      &lt;div&gt;</p>
+<p>        &lt;h1&gt;البسملة الطبية&lt;/h1&gt;</p>
+<p>        &lt;p&gt;نظام الفواتير الذكي&lt;/p&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>    &lt;/div&gt;</p>
+<p>    &lt;div class=&quot;header-actions&quot;&gt;</p>
+<p>      &lt;button class=&quot;btn btn-ghost&quot; onclick=&quot;resetInvoice()&quot; title=&quot;جديد&quot;&gt;🔄 &lt;span class=&quot;hidden-sm&quot;&gt;جديد&lt;/span&gt;&lt;/button&gt;</p>
+<p>      &lt;button class=&quot;btn btn-outline&quot; onclick=&quot;exportAsCSV()&quot; title=&quot;Excel&quot;&gt;📊 Excel&lt;/button&gt;</p>
+<p>      &lt;button class=&quot;btn btn-primary&quot; onclick=&quot;window.print()&quot; title=&quot;PDF&quot;&gt;🖨️ PDF&lt;/button&gt;</p>
+<p>    &lt;/div&gt;</p>
+<p>  &lt;/div&gt;</p>
+<p>&lt;/header&gt;</p>
+<p><br/></p>
+<p>&lt;main class=&quot;main&quot;&gt;</p>
+<p>  &lt;div class=&quot;grid&quot;&gt;</p>
+<p>    </p>
+<p>    &lt;!-- Controls --&gt;</p>
+<p>    &lt;section class=&quot;col-controls no-print&quot;&gt;</p>
+<p>      </p>
+<p>      &lt;!-- AI card --&gt;</p>
+<p>      &lt;div class=&quot;card ai-card&quot;&gt;</p>
+<p>        &lt;div class=&quot;ai-head&quot;&gt;</p>
+<p>          &lt;div style=&quot;display:flex;align-items:center;gap:8px&quot;&gt;</p>
+<p>            &lt;div class=&quot;ai-icon-badge&quot;&gt;✨&lt;/div&gt;</p>
+<p>            &lt;h2&gt;المولد التلقائي الذكي&lt;/h2&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          &lt;span id=&quot;loop-badge&quot; class=&quot;ai-badge&quot;&gt;جاهز&lt;/span&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>        &lt;p class=&quot;ai-desc&quot;&gt;شغّل التوليد المستمر لإنشاء فواتير تلقائية، أو ولّد فاتورة مخصصة فوراً.&lt;/p&gt;</p>
+<p>        </p>
+<p>        &lt;textarea id=&quot;ai-prompt&quot; class=&quot;form-input&quot; rows=&quot;2&quot; placeholder=&quot;اكتب وصف الطلبية...&quot;&gt;&lt;/textarea&gt;</p>
+<p>        </p>
+<p>        &lt;div class=&quot;chips&quot;&gt;</p>
+<p>          &lt;button class=&quot;chip&quot; onclick=&quot;fillPrompt(&#39;طلبية مراهم ومضادات حيوية وقطرات عيون&#39;)&quot;&gt;💊 مضادات&lt;/button&gt;</p>
+<p>          &lt;button class=&quot;chip&quot; onclick=&quot;fillPrompt(&#39;طلبية أدوية أطفال ومسكنات وخافض حرارة&#39;)&quot;&gt;🩺 أطفال&lt;/button&gt;</p>
+<p>          &lt;button class=&quot;chip&quot; onclick=&quot;fillPrompt(&#39;تجهيز صيدلية بمستلزمات طبية وفيتامينات&#39;)&quot;&gt;🏥 فيتامينات&lt;/button&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>        </p>
+<p>        &lt;div class=&quot;ai-actions&quot;&gt;</p>
+<p>          &lt;button class=&quot;btn btn-primary btn-block&quot; onclick=&quot;generateWithAI()&quot;&gt;✨ توليد&lt;/button&gt;</p>
+<p>          &lt;button id=&quot;loop-btn&quot; class=&quot;btn btn-dark btn-block&quot; onclick=&quot;toggleAutoLoop()&quot;&gt;♾️ مستمر&lt;/button&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>      </p>
+<p>      &lt;!-- History --&gt;</p>
+<p>      &lt;div class=&quot;card&quot;&gt;</p>
+<p>        &lt;div class=&quot;card-title&quot;&gt;</p>
+<p>          &lt;div class=&quot;label&quot;&gt;⏱️ السجل (&lt;span id=&quot;saved-count&quot;&gt;0&lt;/span&gt;)&lt;/div&gt;</p>
+<p>          &lt;button class=&quot;btn btn-sm&quot; style=&quot;color:var(--r500);background:transparent&quot; onclick=&quot;clearSavedHistory()&quot;&gt;مسح&lt;/button&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>        &lt;div id=&quot;history-list&quot; class=&quot;history-list&quot;&gt;</p>
+<p>          &lt;span class=&quot;history-empty&quot;&gt;ستُحفظ الفواتير تلقائياً هنا...&lt;/span&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>      </p>
+<p>      &lt;!-- Document data --&gt;</p>
+<p>      &lt;div class=&quot;card&quot;&gt;</p>
+<p>        &lt;div class=&quot;card-title&quot;&gt;&lt;div class=&quot;label&quot;&gt;📄 بيانات المستند&lt;/div&gt;&lt;/div&gt;</p>
+<p>        </p>
+<p>        &lt;div class=&quot;form-grid-2&quot;&gt;</p>
+<p>          &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>            &lt;label class=&quot;form-label&quot;&gt;نوع المستند&lt;/label&gt;</p>
+<p>            &lt;select id=&quot;in-doc-type&quot; class=&quot;form-input&quot; onchange=&quot;updatePreview()&quot;&gt;</p>
+<p>              &lt;option value=&quot;أمر شراء&quot;&gt;أمر شراء&lt;/option&gt;</p>
+<p>              &lt;option value=&quot;فاتورة مبيعات&quot;&gt;فاتورة مبيعات&lt;/option&gt;</p>
+<p>              &lt;option value=&quot;عرض سعر&quot;&gt;عرض سعر&lt;/option&gt;</p>
+<p>            &lt;/select&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>            &lt;label class=&quot;form-label&quot;&gt;رقم الفاتورة&lt;/label&gt;</p>
+<p>            &lt;input type=&quot;text&quot; id=&quot;in-inv-number&quot; class=&quot;form-input mono&quot; value=&quot;2244&quot; oninput=&quot;updatePreview()&quot;&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>            &lt;label class=&quot;form-label&quot;&gt;التاريخ&lt;/label&gt;</p>
+<p>            &lt;input type=&quot;date&quot; id=&quot;in-issue-date&quot; class=&quot;form-input&quot; oninput=&quot;updatePreview()&quot;&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>            &lt;label class=&quot;form-label&quot;&gt;العملة&lt;/label&gt;</p>
+<p>            &lt;select id=&quot;in-currency&quot; class=&quot;form-input&quot; onchange=&quot;updatePreview()&quot;&gt;</p>
+<p>              &lt;option value=&quot;ج.س&quot; selected&gt;جنيه سوداني (ج.س)&lt;/option&gt;</p>
+<p>              &lt;option value=&quot;&quot;&gt;بدون رمز&lt;/option&gt;</p>
+<p>              &lt;option value=&quot;$&quot;&gt;دولار ($)&lt;/option&gt;</p>
+<p>              &lt;option value=&quot;ر.س&quot;&gt;ريال (ر.س)&lt;/option&gt;</p>
+<p>            &lt;/select&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>        </p>
+<p>        &lt;div class=&quot;form-grid-2&quot; style=&quot;margin-top:4px;padding-top:10px;border-top:1px solid var(--s100)&quot;&gt;</p>
+<p>          &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>            &lt;label class=&quot;form-label strong&quot;&gt;العميل&lt;/label&gt;</p>
+<p>            &lt;input type=&quot;text&quot; id=&quot;in-client-name&quot; class=&quot;form-input&quot; value=&quot;صيدلية د. سناء&quot; oninput=&quot;updatePreview()&quot;&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>            &lt;label class=&quot;form-label strong&quot;&gt;الهاتف&lt;/label&gt;</p>
+<p>            &lt;input type=&quot;text&quot; id=&quot;in-client-phone&quot; class=&quot;form-input mono&quot; value=&quot;0912345678&quot; oninput=&quot;updatePreview()&quot;&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>        </p>
+<p>        &lt;div style=&quot;display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--s100)&quot;&gt;</p>
+<p>          &lt;span style=&quot;font-size:10px;color:var(--s500)&quot;&gt;الشعار: البسملة الافتراضي&lt;/span&gt;</p>
+<p>          &lt;label class=&quot;btn btn-sm&quot; style=&quot;color:var(--b600);background:transparent;cursor:pointer;font-size:11px;font-weight:700&quot;&gt;</p>
+<p>            📷 تغيير</p>
+<p>            &lt;input type=&quot;file&quot; id=&quot;logo-upload&quot; accept=&quot;image/*&quot; class=&quot;hidden&quot; onchange=&quot;handleLogoUpload(event)&quot;&gt;</p>
+<p>          &lt;/label&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>      </p>
+<p>      &lt;!-- Items --&gt;</p>
+<p>      &lt;div class=&quot;card&quot;&gt;</p>
+<p>        &lt;div class=&quot;card-title&quot;&gt;</p>
+<p>          &lt;div class=&quot;label&quot;&gt;💊 الأصناف&lt;/div&gt;</p>
+<p>          &lt;button class=&quot;btn btn-sm&quot; style=&quot;color:var(--g700);background:var(--e50);border:1px solid var(--e200)&quot; onclick=&quot;addItemRow()&quot;&gt;➕ إضافة&lt;/button&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>        &lt;div id=&quot;items-list&quot; class=&quot;items-list&quot;&gt;&lt;/div&gt;</p>
+<p>        </p>
+<p>        &lt;div style=&quot;padding-top:10px;border-top:1px solid var(--s100);margin-top:8px&quot;&gt;</p>
+<p>          &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>            &lt;label class=&quot;form-label&quot;&gt;الخصم&lt;/label&gt;</p>
+<p>            &lt;input type=&quot;number&quot; id=&quot;in-discount&quot; class=&quot;form-input mono&quot; value=&quot;0&quot; min=&quot;0&quot; step=&quot;0.01&quot; oninput=&quot;updatePreview()&quot;&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>            &lt;label class=&quot;form-label&quot;&gt;ملاحظات&lt;/label&gt;</p>
+<p>            &lt;input type=&quot;text&quot; id=&quot;in-notes&quot; class=&quot;form-input&quot; value=&quot;نقبل السداد عبر حساب - بنكك&quot; oninput=&quot;updatePreview()&quot;&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>      </p>
+<p>      &lt;!-- Export note --&gt;</p>
+<p>      &lt;div class=&quot;card&quot; style=&quot;background:#fffbeb;border-color:#fde68a&quot;&gt;</p>
+<p>        &lt;div style=&quot;display:flex;gap:8px;align-items:flex-start&quot;&gt;</p>
+<p>          &lt;span style=&quot;font-size:16px&quot;&gt;💡&lt;/span&gt;</p>
+<p>          &lt;div style=&quot;font-size:11px;color:#78350f;line-height:1.6&quot;&gt;</p>
+<p>            &lt;strong&gt;لحفظ كصورة:&lt;/strong&gt; استخدم زر &lt;strong&gt;لقطة الشاشة&lt;/strong&gt; في هاتفك (Power + Volume Down).&lt;br&gt;</p>
+<p>            &lt;strong&gt;لحفظ كـ PDF:&lt;/strong&gt; اضغط زر PDF بالأعلى ← اختر &quot;حفظ كـ PDF&quot;.</p>
+<p>          &lt;/div&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>      </p>
+<p>    &lt;/section&gt;</p>
+<p>    </p>
+<p>    &lt;!-- Preview --&gt;</p>
+<p>    &lt;section class=&quot;col-preview&quot;&gt;</p>
+<p>      &lt;div class=&quot;preview-toolbar no-print&quot;&gt;</p>
+<p>        &lt;span class=&quot;preview-tag&quot;&gt;&lt;span class=&quot;dot&quot;&gt;&lt;/span&gt; معاينة حية&lt;/span&gt;</p>
+<p>        &lt;span style=&quot;font-size:10px;color:var(--s400)&quot;&gt;A4&lt;/span&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>      </p>
+<p>      &lt;div id=&quot;invoice-paper&quot; class=&quot;invoice-paper&quot;&gt;</p>
+<p>        &lt;div class=&quot;paper-bar&quot;&gt;&lt;div class=&quot;blue&quot;&gt;&lt;/div&gt;&lt;div class=&quot;green&quot;&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p>        </p>
+<p>        &lt;div class=&quot;watermark&quot;&gt;</p>
+<p>          &lt;svg viewBox=&quot;0 0 200 200&quot; fill=&quot;none&quot;&gt;</p>
+<p>            &lt;path d=&quot;M50 30 H110 C135 30 150 45 150 68 C150 85 138 96 122 100 C142 104 155 118 155 138 C155 162 135 175 108 175 H50 V30 Z&quot; fill=&quot;#1e3a8a&quot;/&gt;</p>
+<p>          &lt;/svg&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>        </p>
+<p>        &lt;div class=&quot;paper-body&quot;&gt;</p>
+<p>          </p>
+<p>          &lt;!-- Header --&gt;</p>
+<p>          &lt;div class=&quot;paper-header&quot;&gt;</p>
+<p>            &lt;div class=&quot;logo-block&quot;&gt;</p>
+<p>              &lt;img id=&quot;uploaded-logo&quot; class=&quot;hidden&quot; alt=&quot;logo&quot;&gt;</p>
+<p>              &lt;div id=&quot;default-logo&quot;&gt;</p>
+<p>                &lt;svg width=&quot;115&quot; height=&quot;95&quot; viewBox=&quot;0 0 220 185&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</p>
+<p>                  &lt;defs&gt;</p>
+<p>                    &lt;linearGradient id=&quot;bg1&quot; x1=&quot;45&quot; y1=&quot;20&quot; x2=&quot;115&quot; y2=&quot;165&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;</p>
+<p>                      &lt;stop offset=&quot;0%&quot; stop-color=&quot;#38bdf8&quot;/&gt;&lt;stop offset=&quot;50%&quot; stop-color=&quot;#1d4ed8&quot;/&gt;&lt;stop offset=&quot;100%&quot; stop-color=&quot;#1e3a8a&quot;/&gt;</p>
+<p>                    &lt;/linearGradient&gt;</p>
+<p>                    &lt;linearGradient id=&quot;gg1&quot; x1=&quot;115&quot; y1=&quot;70&quot; x2=&quot;185&quot; y2=&quot;145&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;</p>
+<p>                      &lt;stop offset=&quot;0%&quot; stop-color=&quot;#84cc16&quot;/&gt;&lt;stop offset=&quot;60%&quot; stop-color=&quot;#22c55e&quot;/&gt;&lt;stop offset=&quot;100%&quot; stop-color=&quot;#15803d&quot;/&gt;</p>
+<p>                    &lt;/linearGradient&gt;</p>
+<p>                    &lt;linearGradient id=&quot;cap1&quot; x1=&quot;80&quot; y1=&quot;95&quot; x2=&quot;115&quot; y2=&quot;125&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;</p>
+<p>                      &lt;stop offset=&quot;0%&quot; stop-color=&quot;#2563eb&quot;/&gt;&lt;stop offset=&quot;100%&quot; stop-color=&quot;#1e3a8a&quot;/&gt;</p>
+<p>                    &lt;/linearGradient&gt;</p>
+<p>                  &lt;/defs&gt;</p>
+<p>                  &lt;path d=&quot;M55 35 C55 24 64 16 75 16 H118 C144 16 160 31 160 53 C160 66 153 76 142 82 C125 75 105 78 92 88 V40 H78 V138 C78 148 86 155 98 155 C115 155 132 148 146 136 C135 157 114 170 88 170 C66 170 55 154 55 132 V35 Z&quot; fill=&quot;url(#bg1)&quot;/&gt;</p>
+<p>                  &lt;path d=&quot;M96 86 C115 68 148 68 166 84 C174 72 179 58 180 44 C192 66 194 96 180 122 C164 150 132 164 102 162 C126 156 146 140 154 118 C160 100 150 85 132 82 C118 80 105 83 96 86 Z&quot; fill=&quot;url(#gg1)&quot;/&gt;</p>
+<p>                  &lt;path d=&quot;M148 118 C162 102 172 82 177 60&quot; stroke=&quot;#fff&quot; stroke-width=&quot;2.5&quot; stroke-linecap=&quot;round&quot; opacity=&quot;.6&quot;/&gt;</p>
+<p>                  &lt;g transform=&quot;translate(106,108) rotate(-42)&quot;&gt;</p>
+<p>                    &lt;rect x=&quot;-24&quot; y=&quot;-11&quot; width=&quot;48&quot; height=&quot;22&quot; rx=&quot;11&quot; fill=&quot;#fff&quot; stroke=&quot;#1e3a8a&quot; stroke-width=&quot;2.5&quot;/&gt;</p>
+<p>                    &lt;path d=&quot;M-13 -11 H0 V11 H-13 C-19.075 11 -24 6.075 -24 0 C-24 -6.075 -19.075 -11 -13 -11 Z&quot; fill=&quot;url(#cap1)&quot;/&gt;</p>
+<p>                    &lt;line x1=&quot;-15&quot; y1=&quot;-5&quot; x2=&quot;-5&quot; y2=&quot;-5&quot; stroke=&quot;#93c5fd&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot;/&gt;</p>
+<p>                  &lt;/g&gt;</p>
+<p>                  &lt;circle cx=&quot;112&quot; cy=&quot;136&quot; r=&quot;11&quot; fill=&quot;url(#cap1)&quot; stroke=&quot;#fff&quot; stroke-width=&quot;1.5&quot;/&gt;</p>
+<p>                  &lt;line x1=&quot;103&quot; y1=&quot;136&quot; x2=&quot;121&quot; y2=&quot;136&quot; stroke=&quot;#93c5fd&quot; stroke-width=&quot;1.8&quot;/&gt;</p>
+<p>                  &lt;circle cx=&quot;134&quot; cy=&quot;126&quot; r=&quot;6.5&quot; fill=&quot;url(#gg1)&quot;/&gt;</p>
+<p>                &lt;/svg&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>              &lt;div class=&quot;logo-name&quot;&gt;البسمله الطبيه&lt;/div&gt;</p>
+<p>              &lt;div class=&quot;logo-tagline&quot;&gt;</p>
+<p>                &lt;span class=&quot;line&quot;&gt;&lt;/span&gt;</p>
+<p>                &lt;span&gt;لتوزيع الأدوية&lt;/span&gt;</p>
+<p>                &lt;span class=&quot;line&quot;&gt;&lt;/span&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>            &lt;/div&gt;</p>
+<p>            </p>
+<p>            &lt;div class=&quot;doc-type-box&quot;&gt;</p>
+<p>              &lt;div class=&quot;doc-type&quot;&gt;</p>
+<p>                &lt;h1 id=&quot;out-doc-type&quot;&gt;أمر شراء&lt;/h1&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>              &lt;p class=&quot;doc-subtitle&quot;&gt;إدارة المبيعات والتوزيع الدوائي&lt;/p&gt;</p>
+<p>            &lt;/div&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          </p>
+<p>          &lt;!-- Client info --&gt;</p>
+<p>          &lt;div class=&quot;client-grid&quot;&gt;</p>
+<p>            &lt;div class=&quot;col&quot;&gt;</p>
+<p>              &lt;div class=&quot;client-row&quot;&gt;</p>
+<p>                &lt;span class=&quot;k&quot;&gt;رقم الفاتورة :&lt;/span&gt;</p>
+<p>                &lt;span id=&quot;out-inv-number&quot; class=&quot;v&quot;&gt;2244&lt;/span&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>              &lt;div class=&quot;client-row&quot;&gt;</p>
+<p>                &lt;span class=&quot;k&quot;&gt;العميل :&lt;/span&gt;</p>
+<p>                &lt;span id=&quot;out-client-name&quot; class=&quot;v&quot;&gt;صيدلية د. سناء&lt;/span&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>            &lt;/div&gt;</p>
+<p>            &lt;div class=&quot;col&quot;&gt;</p>
+<p>              &lt;div class=&quot;client-row&quot;&gt;</p>
+<p>                &lt;span class=&quot;k&quot;&gt;التاريخ :&lt;/span&gt;</p>
+<p>                &lt;span id=&quot;out-issue-date&quot; class=&quot;v&quot;&gt;-&lt;/span&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>              &lt;div class=&quot;client-row&quot;&gt;</p>
+<p>                &lt;span class=&quot;k&quot;&gt;الهاتف :&lt;/span&gt;</p>
+<p>                &lt;span id=&quot;out-client-phone&quot; class=&quot;v ltr&quot;&gt;0912345678&lt;/span&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>            &lt;/div&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          </p>
+<p>          &lt;!-- Table --&gt;</p>
+<p>          &lt;div class=&quot;table-wrap&quot;&gt;</p>
+<p>            &lt;table class=&quot;items-table&quot;&gt;</p>
+<p>              &lt;thead&gt;</p>
+<p>                &lt;tr&gt;</p>
+<p>                  &lt;th class=&quot;right&quot;&gt;الصنف&lt;/th&gt;</p>
+<p>                  &lt;th style=&quot;width:50px&quot;&gt;الكمية&lt;/th&gt;</p>
+<p>                  &lt;th style=&quot;width:50px&quot;&gt;البونص&lt;/th&gt;</p>
+<p>                  &lt;th style=&quot;width:60px&quot;&gt;النوع&lt;/th&gt;</p>
+<p>                  &lt;th style=&quot;width:80px&quot;&gt;السعر&lt;/th&gt;</p>
+<p>                  &lt;th style=&quot;width:90px&quot;&gt;الإجمالي&lt;/th&gt;</p>
+<p>                &lt;/tr&gt;</p>
+<p>              &lt;/thead&gt;</p>
+<p>              &lt;tbody id=&quot;out-items-body&quot;&gt;&lt;/tbody&gt;</p>
+<p>              &lt;tfoot&gt;</p>
+<p>                &lt;tr&gt;</p>
+<p>                  &lt;td style=&quot;text-align:right;padding-right:10px&quot;&gt;عدد الأصناف:&lt;/td&gt;</p>
+<p>                  &lt;td id=&quot;out-items-count&quot; class=&quot;count&quot;&gt;0&lt;/td&gt;</p>
+<p>                  &lt;td colspan=&quot;4&quot; class=&quot;foot-note&quot;&gt;البسملة الطبية لتوزيع الأدوية&lt;/td&gt;</p>
+<p>                &lt;/tr&gt;</p>
+<p>              &lt;/tfoot&gt;</p>
+<p>            &lt;/table&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          </p>
+<p>          &lt;!-- Totals --&gt;</p>
+<p>          &lt;div class=&quot;totals-wrap&quot;&gt;</p>
+<p>            &lt;div class=&quot;totals-box&quot;&gt;</p>
+<p>              &lt;div class=&quot;total-row&quot;&gt;</p>
+<p>                &lt;span class=&quot;k&quot;&gt;الإجمالي :&lt;/span&gt;</p>
+<p>                &lt;span id=&quot;out-subtotal&quot; class=&quot;v&quot;&gt;0&lt;/span&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>              &lt;div class=&quot;total-row discount&quot;&gt;</p>
+<p>                &lt;span class=&quot;k&quot;&gt;الخصم :&lt;/span&gt;</p>
+<p>                &lt;span id=&quot;out-discount&quot; class=&quot;v&quot;&gt;0&lt;/span&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>              &lt;div class=&quot;grand-row&quot;&gt;</p>
+<p>                &lt;span class=&quot;k&quot;&gt;الصافي :&lt;/span&gt;</p>
+<p>                &lt;span id=&quot;out-grand-total&quot; class=&quot;v&quot;&gt;0&lt;/span&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>            &lt;/div&gt;</p>
+<p>            </p>
+<p>            &lt;div class=&quot;notes-sign&quot;&gt;</p>
+<p>              &lt;div class=&quot;notes-box&quot;&gt;</p>
+<p>                &lt;div class=&quot;head&quot;&gt;ℹ️ &lt;span&gt;ملاحظات :&lt;/span&gt;&lt;/div&gt;</p>
+<p>                &lt;p id=&quot;out-notes&quot;&gt;نقبل السداد عبر حساب - بنكك&lt;/p&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>              &lt;div class=&quot;sign-row&quot;&gt;</p>
+<p>                &lt;div class=&quot;sign-box&quot;&gt;</p>
+<p>                  &lt;div class=&quot;label&quot;&gt;توقيع المستلم&lt;/div&gt;</p>
+<p>                  &lt;div class=&quot;line&quot;&gt;&lt;/div&gt;</p>
+<p>                &lt;/div&gt;</p>
+<p>                &lt;div class=&quot;sign-box blue&quot;&gt;</p>
+<p>                  &lt;div class=&quot;label&quot;&gt;ختم البسملة&lt;/div&gt;</p>
+<p>                  &lt;div class=&quot;line&quot;&gt;&lt;/div&gt;</p>
+<p>                &lt;/div&gt;</p>
+<p>              &lt;/div&gt;</p>
+<p>            &lt;/div&gt;</p>
+<p>          &lt;/div&gt;</p>
+<p>          </p>
+<p>        &lt;/div&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>    &lt;/section&gt;</p>
+<p>    </p>
+<p>  &lt;/div&gt;</p>
+<p>&lt;/main&gt;</p>
+<p><br/></p>
+<p>&lt;!-- Toast --&gt;</p>
+<p>&lt;div id=&quot;toast&quot; class=&quot;toast&quot;&gt;</p>
+<p>  &lt;span id=&quot;toast-icon&quot; class=&quot;toast-icon&quot;&gt;✅&lt;/span&gt;</p>
+<p>  &lt;span id=&quot;toast-msg&quot; class=&quot;toast-msg&quot;&gt;تم&lt;/span&gt;</p>
+<p>&lt;/div&gt;</p>
+<p><br/></p>
+<p>&lt;script&gt;</p>
+<p>// ============ Data ============</p>
+<p>let invoiceItems = [</p>
+<p>  { id: 1, name: &#39;Butagynizol CD 2% Cream (Candid)&#39;, qty: 11, bonus: 0, unit: &#39;tube&#39;, price: 13000 },</p>
+<p>  { id: 2, name: &#39;Amoxicillin 250mg Caps&#39;, qty: 100, bonus: 0, unit: &#39;box&#39;, price: 3200 },</p>
+<p>  { id: 3, name: &#39;Gentamycin Eye/Ear Drops&#39;, qty: 25, bonus: 0, unit: &#39;vial&#39;, price: 3500 },</p>
+<p>  { id: 4, name: &#39;Butagynizol CD 2% Cream (Candid)&#39;, qty: 19, bonus: 0, unit: &#39;tube&#39;, price: 13000 }</p>
+<p>];</p>
+<p><br/></p>
+<p>const pharmaciesDB = [</p>
+<p>  { name: &#39;صيدلية د. سناء&#39;, phone: &#39;0912345678&#39; },</p>
+<p>  { name: &#39;صيدلية الشفاء الحديثة&#39;, phone: &#39;0912887766&#39; },</p>
+<p>  { name: &#39;صيدلية النيل الطبية&#39;, phone: &#39;0123456789&#39; },</p>
+<p>  { name: &#39;صيدلية الأمل المركزية&#39;, phone: &#39;0991122334&#39; },</p>
+<p>  { name: &#39;صيدلية الرحمة - بحري&#39;, phone: &#39;0915544332&#39; },</p>
+<p>  { name: &#39;مستشفى البسمة الطبي&#39;, phone: &#39;0118899001&#39; }</p>
+<p>];</p>
+<p><br/></p>
+<p>const medicinesCatalog = [</p>
+<p>  { name: &#39;Butagynizol CD 2% Cream&#39;, unit: &#39;tube&#39;, price: 13000 },</p>
+<p>  { name: &#39;Amoxicillin 250mg Caps&#39;, unit: &#39;box&#39;, price: 3200 },</p>
+<p>  { name: &#39;Gentamycin Eye/Ear Drops&#39;, unit: &#39;vial&#39;, price: 3500 },</p>
+<p>  { name: &#39;Azithromycin 500mg Tabs&#39;, unit: &#39;box&#39;, price: 5800 },</p>
+<p>  { name: &#39;Ciprofloxacin 0.3% Drops&#39;, unit: &#39;vial&#39;, price: 3600 },</p>
+<p>  { name: &#39;Fusidic Acid 2% Cream&#39;, unit: &#39;tube&#39;, price: 7400 },</p>
+<p>  { name: &#39;Ceftriaxone 1g Injection&#39;, unit: &#39;vial&#39;, price: 4100 },</p>
+<p>  { name: &#39;Paracetamol 120mg/5ml Susp&#39;, unit: &#39;bottle&#39;, price: 2800 },</p>
+<p>  { name: &#39;Ibuprofen 100mg/5ml Syrup&#39;, unit: &#39;bottle&#39;, price: 3400 },</p>
+<p>  { name: &#39;Amoxicillin + Clavulanic Susp&#39;, unit: &#39;bottle&#39;, price: 6500 },</p>
+<p>  { name: &#39;Vitamin C 1000mg Tabs&#39;, unit: &#39;tube&#39;, price: 4500 },</p>
+<p>  { name: &#39;Multivitamin + Zinc Caps&#39;, unit: &#39;box&#39;, price: 5200 }</p>
+<p>];</p>
+<p><br/></p>
+<p>let autoLoopInterval = null;</p>
+<p>let savedInvoices = [];</p>
+<p>let invoiceCounter = 2244;</p>
+<p><br/></p>
+<p>// ============ Init ============</p>
+<p>document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {</p>
+<p>  const today = new Date();</p>
+<p>  document.getElementById(&#39;in-issue-date&#39;).value = today.toISOString().split(&#39;T&#39;)[0];</p>
+<p>  </p>
+<p>  try {</p>
+<p>    const stored = localStorage.getItem(&#39;basmala_saved&#39;);</p>
+<p>    if (stored) { savedInvoices = JSON.parse(stored); renderHistory(); }</p>
+<p>  } catch(e){}</p>
+<p>  </p>
+<p>  renderItemsEditor();</p>
+<p>  updatePreview();</p>
+<p>});</p>
+<p><br/></p>
+<p>// ============ Toast ============</p>
+<p>function showToast(msg, ok = true) {</p>
+<p>  const t = document.getElementById(&#39;toast&#39;);</p>
+<p>  const m = document.getElementById(&#39;toast-msg&#39;);</p>
+<p>  const i = document.getElementById(&#39;toast-icon&#39;);</p>
+<p>  m.textContent = msg;</p>
+<p>  i.textContent = ok ? &#39;✅&#39; : &#39;ℹ️&#39;;</p>
+<p>  i.style.color = ok ? &#39;#34d399&#39; : &#39;#60a5fa&#39;;</p>
+<p>  t.classList.add(&#39;show&#39;);</p>
+<p>  clearTimeout(window._tT);</p>
+<p>  window._tT = setTimeout(() =&gt; t.classList.remove(&#39;show&#39;), 2600);</p>
+<p>}</p>
+<p><br/></p>
+<p>// ============ Logo ============</p>
+<p>function handleLogoUpload(e) {</p>
+<p>  const f = e.target.files[0];</p>
+<p>  if (!f) return;</p>
+<p>  const r = new FileReader();</p>
+<p>  r.onload = ev =&gt; {</p>
+<p>    const img = document.getElementById(&#39;uploaded-logo&#39;);</p>
+<p>    const def = document.getElementById(&#39;default-logo&#39;);</p>
+<p>    img.src = ev.target.result;</p>
+<p>    img.classList.remove(&#39;hidden&#39;);</p>
+<p>    def.classList.add(&#39;hidden&#39;);</p>
+<p>    showToast(&#39;تم تحديث الشعار&#39;);</p>
+<p>  };</p>
+<p>  r.readAsDataURL(f);</p>
+<p>}</p>
+<p><br/></p>
+<p>function fillPrompt(t) { document.getElementById(&#39;ai-prompt&#39;).value = t; }</p>
+<p><br/></p>
+<p>// ============ Auto Loop ============</p>
+<p>function toggleAutoLoop() {</p>
+<p>  const btn = document.getElementById(&#39;loop-btn&#39;);</p>
+<p>  const badge = document.getElementById(&#39;loop-badge&#39;);</p>
+<p>  if (autoLoopInterval) {</p>
+<p>    clearInterval(autoLoopInterval); autoLoopInterval = null;</p>
+<p>    btn.classList.remove(&#39;btn-danger&#39;); btn.classList.add(&#39;btn-dark&#39;);</p>
+<p>    btn.innerHTML = &#39;♾️ مستمر&#39;;</p>
+<p>    badge.textContent = &#39;متوقف&#39;;</p>
+<p>    badge.className = &#39;ai-badge&#39;;</p>
+<p>    showToast(&#39;تم إيقاف التوليد&#39;);</p>
+<p>  } else {</p>
+<p>    btn.classList.remove(&#39;btn-dark&#39;); btn.classList.add(&#39;btn-danger&#39;);</p>
+<p>    btn.innerHTML = &#39;⏸️ إيقاف&#39;;</p>
+<p>    badge.textContent = &#39;يعمل...&#39;;</p>
+<p>    badge.className = &#39;ai-badge live&#39;;</p>
+<p>    runAutoCycle();</p>
+<p>    autoLoopInterval = setInterval(runAutoCycle, 3500);</p>
+<p>    showToast(&#39;بدأ التوليد المستمر&#39;);</p>
+<p>  }</p>
+<p>}</p>
+<p><br/></p>
+<p>function runAutoCycle() {</p>
+<p>  invoiceCounter++;</p>
+<p>  document.getElementById(&#39;in-inv-number&#39;).value = invoiceCounter;</p>
+<p>  const cl = pharmaciesDB[Math.floor(Math.random() * pharmaciesDB.length)];</p>
+<p>  document.getElementById(&#39;in-client-name&#39;).value = cl.name;</p>
+<p>  document.getElementById(&#39;in-client-phone&#39;).value = cl.phone;</p>
+<p>  </p>
+<p>  const n = Math.floor(Math.random() * 3) + 4;</p>
+<p>  const sh = [...medicinesCatalog].sort(() =&gt; 0.5 - Math.random()).slice(0, n);</p>
+<p>  invoiceItems = sh.map((m, i) =&gt; {</p>
+<p>    const q = (Math.floor(Math.random() * 10) + 1) * 10;</p>
+<p>    return { id: Date.now() + i, name: m.name, qty: q, bonus: q &gt;= 50 ? Math.floor(q/10) : 0, unit: m.unit, price: m.price };</p>
+<p>  });</p>
+<p>  renderItemsEditor(); updatePreview(); saveToHistory();</p>
+<p>}</p>
+<p><br/></p>
+<p>// ============ AI Single ============</p>
+<p>function generateWithAI() {</p>
+<p>  const p = document.getElementById(&#39;ai-prompt&#39;).value.trim().toLowerCase();</p>
+<p>  const btn = event.target;</p>
+<p>  const orig = btn.innerHTML;</p>
+<p>  btn.innerHTML = &#39;⏳ جاري...&#39;; btn.disabled = true;</p>
+<p>  </p>
+<p>  setTimeout(() =&gt; {</p>
+<p>    let items;</p>
+<p>    if (p.includes(&#39;أطفال&#39;) || p.includes(&#39;حرارة&#39;) || p.includes(&#39;مسكن&#39;)) {</p>
+<p>      items = [</p>
+<p>        { id: Date.now()+1, name: &#39;Paracetamol 120mg/5ml Susp&#39;, qty: 50, bonus: 5, unit: &#39;bottle&#39;, price: 2800 },</p>
+<p>        { id: Date.now()+2, name: &#39;Ibuprofen 100mg/5ml Syrup&#39;, qty: 40, bonus: 4, unit: &#39;bottle&#39;, price: 3400 },</p>
+<p>        { id: Date.now()+3, name: &#39;Amoxicillin + Clav 228mg&#39;, qty: 30, bonus: 3, unit: &#39;bottle&#39;, price: 6500 },</p>
+<p>        { id: Date.now()+4, name: &#39;Saline Nasal Drops 0.9%&#39;, qty: 60, bonus: 0, unit: &#39;vial&#39;, price: 1900 }</p>
+<p>      ];</p>
+<p>    } else if (p.includes(&#39;فيتامين&#39;) || p.includes(&#39;مستلزمات&#39;)) {</p>
+<p>      items = [</p>
+<p>        { id: Date.now()+1, name: &#39;Vitamin C 1000mg Tabs&#39;, qty: 40, bonus: 4, unit: &#39;tube&#39;, price: 4500 },</p>
+<p>        { id: Date.now()+2, name: &#39;Multivitamin + Zinc Caps&#39;, qty: 50, bonus: 5, unit: &#39;box&#39;, price: 5200 },</p>
+<p>        { id: Date.now()+3, name: &#39;Surgical Gloves (Box)&#39;, qty: 20, bonus: 0, unit: &#39;box&#39;, price: 9800 },</p>
+<p>        { id: Date.now()+4, name: &#39;Digital Thermometer&#39;, qty: 15, bonus: 1, unit: &#39;pcs&#39;, price: 4200 }</p>
+<p>      ];</p>
+<p>    } else if (!p) { runAutoCycle(); btn.innerHTML = orig; btn.disabled = false; return; }</p>
+<p>    else {</p>
+<p>      items = [</p>
+<p>        { id: Date.now()+1, name: &#39;Azithromycin 500mg Tabs&#39;, qty: 60, bonus: 6, unit: &#39;box&#39;, price: 5800 },</p>
+<p>        { id: Date.now()+2, name: &#39;Ciprofloxacin 0.3% Drops&#39;, qty: 30, bonus: 3, unit: &#39;vial&#39;, price: 3600 },</p>
+<p>        { id: Date.now()+3, name: &#39;Fusidic Acid 2% Cream&#39;, qty: 25, bonus: 2, unit: &#39;tube&#39;, price: 7400 },</p>
+<p>        { id: Date.now()+4, name: &#39;Ceftriaxone 1g Injection&#39;, qty: 50, bonus: 5, unit: &#39;vial&#39;, price: 4100 }</p>
+<p>      ];</p>
+<p>    }</p>
+<p>    invoiceCounter++;</p>
+<p>    document.getElementById(&#39;in-inv-number&#39;).value = invoiceCounter;</p>
+<p>    invoiceItems = items;</p>
+<p>    renderItemsEditor(); updatePreview(); saveToHistory();</p>
+<p>    btn.innerHTML = orig; btn.disabled = false;</p>
+<p>    showToast(&#39;تم توليد الفاتورة&#39;);</p>
+<p>  }, 450);</p>
+<p>}</p>
+<p><br/></p>
+<p>// ============ History ============</p>
+<p>function saveToHistory() {</p>
+<p>  const invNum = document.getElementById(&#39;in-inv-number&#39;).value;</p>
+<p>  const snap = {</p>
+<p>    id: Date.now(),</p>
+<p>    invNum,</p>
+<p>    clientName: document.getElementById(&#39;in-client-name&#39;).value,</p>
+<p>    clientPhone: document.getElementById(&#39;in-client-phone&#39;).value,</p>
+<p>    docType: document.getElementById(&#39;in-doc-type&#39;).value,</p>
+<p>    discount: parseFloat(document.getElementById(&#39;in-discount&#39;).value) || 0,</p>
+<p>    total: invoiceItems.reduce((s,i) =&gt; s + i.qty * i.price, 0),</p>
+<p>    items: JSON.parse(JSON.stringify(invoiceItems))</p>
+<p>  };</p>
+<p>  savedInvoices = savedInvoices.filter(i =&gt; i.invNum !== invNum);</p>
+<p>  savedInvoices.unshift(snap);</p>
+<p>  if (savedInvoices.length &gt; 20) savedInvoices.pop();</p>
+<p>  try { localStorage.setItem(&#39;basmala_saved&#39;, JSON.stringify(savedInvoices)); } catch(e){}</p>
+<p>  renderHistory();</p>
+<p>}</p>
+<p><br/></p>
+<p>function renderHistory() {</p>
+<p>  const c = document.getElementById(&#39;history-list&#39;);</p>
+<p>  document.getElementById(&#39;saved-count&#39;).textContent = savedInvoices.length;</p>
+<p>  if (savedInvoices.length === 0) {</p>
+<p>    c.innerHTML = &#39;&lt;span class=&quot;history-empty&quot;&gt;ستُحفظ الفواتير تلقائياً هنا...&lt;/span&gt;&#39;;</p>
+<p>    return;</p>
+<p>  }</p>
+<p>  c.innerHTML = &#39;&#39;;</p>
+<p>  savedInvoices.forEach(inv =&gt; {</p>
+<p>    const b = document.createElement(&#39;button&#39;);</p>
+<p>    b.className = &#39;history-chip&#39;;</p>
+<p>    b.onclick = () =&gt; loadFromHistory(inv.id);</p>
+<p>    b.innerHTML = `</p>
+<p>      &lt;div style=&quot;display:flex;justify-content:space-between;gap:6px;align-items:center&quot;&gt;</p>
+<p>        &lt;span class=&quot;num&quot;&gt;#${inv.invNum}&lt;/span&gt;</p>
+<p>        &lt;span class=&quot;total&quot;&gt;${fmt(inv.total, false)}&lt;/span&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>      &lt;div class=&quot;name&quot;&gt;${inv.clientName}&lt;/div&gt;</p>
+<p>    `;</p>
+<p>    c.appendChild(b);</p>
+<p>  });</p>
+<p>}</p>
+<p><br/></p>
+<p>function loadFromHistory(id) {</p>
+<p>  if (autoLoopInterval) toggleAutoLoop();</p>
+<p>  const f = savedInvoices.find(i =&gt; i.id === id);</p>
+<p>  if (!f) return;</p>
+<p>  document.getElementById(&#39;in-inv-number&#39;).value = f.invNum;</p>
+<p>  document.getElementById(&#39;in-client-name&#39;).value = f.clientName;</p>
+<p>  document.getElementById(&#39;in-client-phone&#39;).value = f.clientPhone;</p>
+<p>  document.getElementById(&#39;in-doc-type&#39;).value = f.docType;</p>
+<p>  document.getElementById(&#39;in-discount&#39;).value = f.discount;</p>
+<p>  invoiceItems = JSON.parse(JSON.stringify(f.items));</p>
+<p>  renderItemsEditor(); updatePreview();</p>
+<p>  showToast(`تم فتح #${f.invNum}`);</p>
+<p>}</p>
+<p><br/></p>
+<p>function clearSavedHistory() {</p>
+<p>  if (!confirm(&#39;مسح جميع الفواتير المحفوظة؟&#39;)) return;</p>
+<p>  savedInvoices = [];</p>
+<p>  try { localStorage.removeItem(&#39;basmala_saved&#39;); } catch(e){}</p>
+<p>  renderHistory();</p>
+<p>  showToast(&#39;تم المسح&#39;);</p>
+<p>}</p>
+<p><br/></p>
+<p>// ============ Items Editor ============</p>
+<p>function renderItemsEditor() {</p>
+<p>  const c = document.getElementById(&#39;items-list&#39;);</p>
+<p>  c.innerHTML = &#39;&#39;;</p>
+<p>  invoiceItems.forEach((item, i) =&gt; {</p>
+<p>    const r = document.createElement(&#39;div&#39;);</p>
+<p>    r.className = &#39;item-row&#39;;</p>
+<p>    r.innerHTML = `</p>
+<p>      &lt;div class=&quot;item-head&quot;&gt;</p>
+<p>        &lt;span class=&quot;item-num&quot;&gt;صنف #${i + 1}&lt;/span&gt;</p>
+<p>        &lt;button class=&quot;item-del&quot; onclick=&quot;removeItem(${item.id})&quot; title=&quot;حذف&quot;&gt;</p>
+<p>          &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;&lt;path d=&quot;M3 6h18M8 6V4h8v2M6 6v14h12V6M10 11v6M14 11v6&quot;/&gt;&lt;/svg&gt;</p>
+<p>        &lt;/button&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>      &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>        &lt;label class=&quot;form-label&quot;&gt;اسم الصنف&lt;/label&gt;</p>
+<p>        &lt;input type=&quot;text&quot; value=&quot;${esc(item.name)}&quot; class=&quot;form-input ltr&quot; style=&quot;font-size:12px;font-weight:700&quot; oninput=&quot;updateItem(${item.id},&#39;name&#39;,this.value)&quot;&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>      &lt;div class=&quot;form-grid-4&quot;&gt;</p>
+<p>        &lt;div&gt;&lt;label class=&quot;form-label&quot;&gt;كمية&lt;/label&gt;&lt;input type=&quot;number&quot; value=&quot;${item.qty}&quot; min=&quot;1&quot; class=&quot;form-input mono&quot; style=&quot;font-size:12px;text-align:center;padding:6px 4px&quot; oninput=&quot;updateItem(${item.id},&#39;qty&#39;,parseFloat(this.value)||0)&quot;&gt;&lt;/div&gt;</p>
+<p>        &lt;div&gt;&lt;label class=&quot;form-label&quot;&gt;بونص&lt;/label&gt;&lt;input type=&quot;number&quot; value=&quot;${item.bonus}&quot; min=&quot;0&quot; class=&quot;form-input mono&quot; style=&quot;font-size:12px;text-align:center;padding:6px 4px&quot; oninput=&quot;updateItem(${item.id},&#39;bonus&#39;,parseFloat(this.value)||0)&quot;&gt;&lt;/div&gt;</p>
+<p>        &lt;div&gt;&lt;label class=&quot;form-label&quot;&gt;نوع&lt;/label&gt;</p>
+<p>          &lt;select class=&quot;form-input mono&quot; style=&quot;font-size:11px;padding:6px 2px&quot; onchange=&quot;updateItem(${item.id},&#39;unit&#39;,this.value)&quot;&gt;</p>
+<p>            ${[&#39;box&#39;,&#39;tube&#39;,&#39;vial&#39;,&#39;bottle&#39;,&#39;strip&#39;,&#39;pcs&#39;].map(u =&gt; `&lt;option value=&quot;${u}&quot; ${item.unit===u?&#39;selected&#39;:&#39;&#39;}&gt;${u}&lt;/option&gt;`).join(&#39;&#39;)}</p>
+<p>          &lt;/select&gt;</p>
+<p>        &lt;/div&gt;</p>
+<p>        &lt;div&gt;&lt;label class=&quot;form-label&quot;&gt;سعر&lt;/label&gt;&lt;input type=&quot;number&quot; value=&quot;${item.price}&quot; min=&quot;0&quot; step=&quot;0.01&quot; class=&quot;form-input mono&quot; style=&quot;font-size:12px;text-align:center;padding:6px 4px&quot; oninput=&quot;updateItem(${item.id},&#39;price&#39;,parseFloat(this.value)||0)&quot;&gt;&lt;/div&gt;</p>
+<p>      &lt;/div&gt;</p>
+<p>    `;</p>
+<p>    c.appendChild(r);</p>
+<p>  });</p>
+<p>}</p>
+<p><br/></p>
+<p>function esc(s) { return String(s).replace(/&quot;/g, &#39;&amp;quot;&#39;).replace(/&lt;/g, &#39;&amp;lt;&#39;); }</p>
+<p><br/></p>
+<p>function addItem() {</p>
+<p>  invoiceItems.push({ id: Date.now(), name: &#39;New Medicine 500mg&#39;, qty: 10, bonus: 0, unit: &#39;box&#39;, price: 5000 });</p>
+<p>  renderItemsEditor(); updatePreview();</p>
+<p>}</p>
+<p><br/></p>
+<p>function removeItem(id) {</p>
+<p>  if (invoiceItems.length &lt;= 1) { showToast(&#39;يجب أن يبقى صنف واحد&#39;, false); return; }</p>
+<p>  invoiceItems = invoiceItems.filter(i =&gt; i.id !== id);</p>
+<p>  renderItemsEditor(); updatePreview();</p>
+<p>}</p>
+<p><br/></p>
+<p>function updateItem(id, field, val) {</p>
+<p>  const it = invoiceItems.find(i =&gt; i.id === id);</p>
+<p>  if (it) { it[field] = val; updatePreview(); }</p>
+<p>}</p>
+<p><br/></p>
+<p>// Aliases for old names</p>
+<p>const addItemRow = addItem;</p>
+<p>const removeItemRow = removeItem;</p>
+<p>const updateItemData = updateItem;</p>
+<p><br/></p>
+<p>// ============ Utils ============</p>
+<p>function fmt(n, dec = true) {</p>
+<p>  return Number(n).toLocaleString(&#39;en-US&#39;, {</p>
+<p>    minimumFractionDigits: dec ? 2 : 0,</p>
+<p>    maximumFractionDigits: dec ? 2 : 0</p>
+<p>  });</p>
+<p>}</p>
+<p><br/></p>
+<p>function fmtDate(s) {</p>
+<p>  if (!s) return &#39;-&#39;;</p>
+<p>  const d = new Date(s + &#39;T00:00:00&#39;);</p>
+<p>  if (isNaN(d.getTime())) return s;</p>
+<p>  return d.toLocaleDateString(&#39;en-US&#39;, { weekday: &#39;long&#39;, year: &#39;numeric&#39;, month: &#39;long&#39;, day: &#39;numeric&#39; });</p>
+<p>}</p>
+<p><br/></p>
+<p>// ============ Preview ============</p>
+<p>function updatePreview() {</p>
+<p>  const cur = document.getElementById(&#39;in-currency&#39;).value;</p>
+<p>  const suf = cur ? &#39; &#39; + cur : &#39;&#39;;</p>
+<p>  </p>
+<p>  document.getElementById(&#39;out-doc-type&#39;).textContent = document.getElementById(&#39;in-doc-type&#39;).value;</p>
+<p>  document.getElementById(&#39;out-inv-number&#39;).textContent = document.getElementById(&#39;in-inv-number&#39;).value || &#39;0000&#39;;</p>
+<p>  document.getElementById(&#39;out-issue-date&#39;).textContent = fmtDate(document.getElementById(&#39;in-issue-date&#39;).value);</p>
+<p>  document.getElementById(&#39;out-client-name&#39;).textContent = document.getElementById(&#39;in-client-name&#39;).value || &#39;عميل نقدي&#39;;</p>
+<p>  document.getElementById(&#39;out-client-phone&#39;).textContent = document.getElementById(&#39;in-client-phone&#39;).value || &#39;-&#39;;</p>
+<p>  document.getElementById(&#39;out-notes&#39;).textContent = document.getElementById(&#39;in-notes&#39;).value;</p>
+<p>  </p>
+<p>  const tb = document.getElementById(&#39;out-items-body&#39;);</p>
+<p>  tb.innerHTML = &#39;&#39;;</p>
+<p>  let sub = 0;</p>
+<p>  invoiceItems.forEach(item =&gt; {</p>
+<p>    const lt = item.qty * item.price;</p>
+<p>    sub += lt;</p>
+<p>    const tr = document.createElement(&#39;tr&#39;);</p>
+<p>    tr.innerHTML = `</p>
+<p>      &lt;td class=&quot;item-name&quot;&gt;${esc(item.name) || &#39;-&#39;}&lt;/td&gt;</p>
+<p>      &lt;td class=&quot;num&quot;&gt;${item.qty}&lt;/td&gt;</p>
+<p>      &lt;td class=&quot;bonus ${item.bonus &gt; 0 ? &#39;&#39; : &#39;zero&#39;}&quot;&gt;${item.bonus}&lt;/td&gt;</p>
+<p>      &lt;td&gt;${item.unit}&lt;/td&gt;</p>
+<p>      &lt;td class=&quot;num&quot;&gt;${fmt(item.price, true)}&lt;/td&gt;</p>
+<p>      &lt;td class=&quot;total&quot;&gt;${fmt(lt, false)}&lt;/td&gt;</p>
+<p>    `;</p>
+<p>    tb.appendChild(tr);</p>
+<p>  });</p>
+<p>  </p>
+<p>  document.getElementById(&#39;out-items-count&#39;).textContent = invoiceItems.length;</p>
+<p>  </p>
+<p>  const disc = parseFloat(document.getElementById(&#39;in-discount&#39;).value) || 0;</p>
+<p>  const net = Math.max(0, sub - disc);</p>
+<p>  document.getElementById(&#39;out-subtotal&#39;).textContent = fmt(sub, true) + suf;</p>
+<p>  document.getElementById(&#39;out-discount&#39;).textContent = fmt(disc, true) + suf;</p>
+<p>  document.getElementById(&#39;out-grand-total&#39;).textContent = fmt(net, true) + suf;</p>
+<p>}</p>
+<p><br/></p>
+<p>// ============ Actions ============</p>
+<p>function resetInvoice() {</p>
+<p>  if (autoLoopInterval) toggleAutoLoop();</p>
+<p>  if (!confirm(&#39;إنشاء فاتورة جديدة؟ سيتم مسح البيانات الحالية.&#39;)) return;</p>
+<p>  invoiceCounter++;</p>
+<p>  invoiceItems = [{ id: Date.now(), name: &#39;Amoxicillin 500mg Caps&#39;, qty: 20, bonus: 2, unit: &#39;box&#39;, price: 4500 }];</p>
+<p>  document.getElementById(&#39;in-inv-number&#39;).value = invoiceCounter;</p>
+<p>  document.getElementById(&#39;in-discount&#39;).value = 0;</p>
+<p>  document.getElementById(&#39;in-client-name&#39;).value = &#39;صيدلية د. سناء&#39;;</p>
+<p>  document.getElementById(&#39;in-client-phone&#39;).value = &#39;0912345678&#39;;</p>
+<p>  renderItemsEditor(); updatePreview(); saveToHistory();</p>
+<p>  showToast(&#39;مسودة جديدة&#39;);</p>
+<p>}</p>
+<p><br/></p>
+<p>function exportAsCSV() {</p>
+<p>  const inv = document.getElementById(&#39;in-inv-number&#39;).value || &#39;2244&#39;;</p>
+<p>  const cl = document.getElementById(&#39;in-client-name&#39;).value || &#39;&#39;;</p>
+<p>  let csv = &#39;\uFEFF&#39;;</p>
+<p>  csv += `البسملة الطبية - فاتورة: ${inv} - العميل: ${cl}\n\n`;</p>
+<p>  csv += &#39;الصنف,الكمية,البونص,النوع,السعر,الإجمالي\n&#39;;</p>
+<p>  invoiceItems.forEach(i =&gt; {</p>
+<p>    csv += `&quot;${i.name}&quot;,${i.qty},${i.bonus},${i.unit},${i.price},${i.qty * i.price}\n`;</p>
+<p>  });</p>
+<p>  const blob = new Blob([csv], { type: &#39;text/csv;charset=utf-8;&#39; });</p>
+<p>  const url = URL.createObjectURL(blob);</p>
+<p>  const a = document.createElement(&#39;a&#39;);</p>
+<p>  a.href = url;</p>
+<p>  a.download = `فاتورة_${inv}.csv`;</p>
+<p>  a.click();</p>
+<p>  setTimeout(() =&gt; URL.revokeObjectURL(url), 1000);</p>
+<p>  showToast(&#39;تم تصدير Excel&#39;);</p>
+<p>}</p>
+<p>&lt;/script&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+            </body>
+            </html>
